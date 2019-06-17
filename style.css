@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+/* import style from google Robonto style */
+
+/**
+ * general style
+ */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  background: #181818;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+/* set the font weight 300 for all heading */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 300;
+}
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+/**
+ * whole content (right and left of the flex)
+ */
+
+#wraper {
+  display: flex; /*type of display*/
+  flex-direction: row; /*type of flex split elelment horizontaly*/
+}
+
+/* work on left side */
+
+/* split screen on two size equal left and right  put fflex =1*/
+
+#left {
+  display: flex; /*to split the element inside the right contetnt*/
+  flex-direction: column; /*to split elements verticly*/
+  flex: 1; /*just to align with the left one*/
+  align-items: center; /*center content from side or horizontly*/
+  justify-content: center; /* center contetn from top or verticly*/
+  height: 100vh;
+}
+
+/* singin section which is inside the left section (children of #left) */
+
+#singnin {
+  display: flex; /*to split the element inside the #singnin div his children elemnt's*/
+  flex-direction: column; /*to move thinks up and down*/
+  justify-content: center; /*center contetn from top */
+  align-items: center; /*center elements horizontly*/
+  width: 80%; /*the widht of div to not take the hole space from the parent #left div*/
+  padding-bottom: 1rem; /*to push thinks from botton create space on bootom*/
+}
+
+#singnin form {
+  width: 80%;
+  padding-bottom: 3rem; /*create space in the bottom of from*/
+}
+
+img {
+  width: 300px;
+  margin-bottom: 8vh;
+}
+
+#singnin label {
+  font-size: 0.9rem; /*decrese  the size of font*/
+  line-height: 2rem; /*increse the distance betwen the line of text*/
+  font-weight: 600; /*rritja e trashesise se shkronjave almoste bolt*/
+}
+
+#singnin .text-input {
+  width: 100%; /*cros all way to the parent horizontaly*/
+  margin-bottom: 1.3rem; /*move from down */
+  border-radius: 2px; /*make the border more visible*/
+  background: #181818; /*change the bacground to almost dark from default who is white*/
+  border: 1px solid #555555; /*make the border of input in diferent coler*/
+  color: #cccccc; /* the color white because the bacgroud is dark */
+  padding: 0.5rem 1rem; /** space 0.5 rem on top and botoon an 1rem aside */
+  line-height: 1.3rem;
+  height: 2.5rem;
+}
+
+/**
+ * right side
+ */
+
+#right {
+  flex: 1;
+}
